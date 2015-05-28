@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.bital"
+        versionCode = "10"
+        version     = "0.0.1" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Bital</name>
+
+    <description>
+        Una aplicación vital para recorrer Bogotá en bicicleta.
+    </description>
+
+    <author href="https://bital.com" email="info">
+        Grupo Bital
+    </author>
+    <icon src="icon.png" />
+    <gap:splash src="splash.png" />
+
+</widget>

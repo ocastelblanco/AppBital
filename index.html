@@ -1,0 +1,1113 @@
+<!doctype html>
+<html>
+<head>
+<title>Documento sin título</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/kc.fab.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/kc.fab.min.js"></script>
+    <script type="text/javascript">
+        var links = [
+            {
+              "url":"#recorrido",
+              "bgcolor":"#03A9F4",
+              "icon":"<i class='fa fa-play-circle'></i>"
+            }
+        ]
+        $(document).on("pagecreate", ".botonAccion", function () {
+            $('.actionButton').kc_fab(links); // Carga el botón en las páginas seleccionadas
+        });
+    </script>
+</head>
+
+<body>
+
+<!-- Inicio de la página Login -->
+<div data-role="page" id="login">
+  <!-- Inicio del contenido -->
+  <div role="main" class="ui-content">
+    <h2 style="text-align:center">Registro</h2>
+    <br>
+    <a href="#inicio" class="ui-btn"><i class="fa fa-facebook-official"></i> Facebook</a>
+    <hr>
+    <input type="text" name="email" id="email" value="" placeholder="Correo electrónico">
+    <input type="text" name="contrasena" id="contrasena" value="" placeholder="Contraseña">
+    <a href="#home" class="ui-btn ui-icon-check ui-btn-icon-left">Aceptar</a>
+</div>
+
+  <!-- Final del contenido -->
+</div>
+<!-- Final de la página Login -->
+
+
+ <!-- Inicio de la página Inicio-->
+
+  <div data-role="page" id="home">
+
+
+  <!-- Inicio del contenido -->
+  <div role="main" class="ui-content">
+
+  <p align="center"><strong>¡Haz ganado una semilla!</strong></p>
+
+  <div align="center">
+  	<img src="semillaganador.png" width="80" height="80">
+  </div>
+
+  <p align="center"><strong>¡Cuídala!</strong></p>
+
+  <a href="#jugar" class="ui-btn">Ir al Jardín</a>
+  <a href="#mapa" class="ui-btn">Ir al Mapa</a>
+
+    </div>
+  <!-- Final del contenido -->
+
+</div>
+<!-- Final de la página Inicio-->
+
+
+
+ <!-- Inicio de la página mapa -->
+<div data-role="page" id="mapa" class="botonAccion">
+
+    <!-- Inicio del panel -->
+	<div data-role="panel" data-display="overlay" id="mipanel">
+        <a href="#" data-rel="close" class="ui-btn ui-icon-delete ui-btn-icon-left">Menu</a>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+            <label for="checkbox-v-2a">Ciclorutas</label>
+            <input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+            <label for="checkbox-v-2b">CAI</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+            <label for="checkbox-v-2c">Ciclotalleres</label>
+            <input type="checkbox" name="checkbox-v-2d" id="checkbox-v-2d">
+            <label for="checkbox-v-2d">Accesorios</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2e" id="checkbox-v-2e">
+            <label for="checkbox-v-2e">Restaurantes y bares</label>
+            <input type="checkbox" name="checkbox-v-2f" id="checkbox-v-2f">
+            <label for="checkbox-v-2f">Cultura y Ocio</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2g" id="checkbox-v-2g">
+            <label for="checkbox-v-2g">Entidades</label>
+            <input type="checkbox" name="checkbox-v-2h" id="checkbox-v-2h">
+            <label for="checkbox-v-2h">Bancos</label>
+        </fieldset>
+
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#jardin" class="ui-btn ui-icon-star ui-btn-icon-left">Jardín</a></li>
+            <li><a href="#historial" class="ui-btn ui-icon-calendar ui-btn-icon-left">Historial</a></li>
+            <li><a href="#reparar" class="ui-btn ui-icon-info  ui-btn-icon-left">Reparar Mi Bici</a></li>
+            <li><a href="#configurar" class="ui-btn ui-icon-gear ui-btn-icon-left">Configuración</a></li>
+        </ul>
+	</div>
+    <!-- Final del panel -->
+
+	<!-- Inicio del header -->
+    <div data-role="header" data-position="fixed">
+    	<a href="#mipanel" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext">Cancel</a>
+		<h1>Mapa</h1>
+    </div>
+    <!-- Final del header -->
+
+	<!-- Inicio del contenido -->
+	<div role="main" class="ui-content">
+
+            <div class="actionButton">
+            </div><!-- Botón de acción, SIEMPRE debe tener la class actionButton -->
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3976.409843849386!2d-74.0891577076569!3d4.6986434395237175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2s!4v1431811193563" width="800" height="600" frameborder="0" style="border:0"></iframe>
+
+	</div>
+    <!-- Final del contenido -->
+
+
+</div>
+<!-- Final de la página Mapa -->
+
+
+<!-- Inicio de la página 2 -->
+<div data-role="page" id="historial">
+
+  <!-- Inicio del panel -->
+	<div data-role="panel" data-display="overlay" id="mipanel">
+        <a href="#" data-rel="close" class="ui-btn ui-icon-delete ui-btn-icon-left">Menu</a>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+            <label for="checkbox-v-2a">Ciclorutas</label>
+            <input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+            <label for="checkbox-v-2b">CAI</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+            <label for="checkbox-v-2c">Ciclotalleres</label>
+            <input type="checkbox" name="checkbox-v-2d" id="checkbox-v-2d">
+            <label for="checkbox-v-2d">Accesorios</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2e" id="checkbox-v-2e">
+            <label for="checkbox-v-2e">Restaurantes y bares</label>
+            <input type="checkbox" name="checkbox-v-2f" id="checkbox-v-2f">
+            <label for="checkbox-v-2f">Cultura y Ocio</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2g" id="checkbox-v-2g">
+            <label for="checkbox-v-2g">Entidades</label>
+            <input type="checkbox" name="checkbox-v-2h" id="checkbox-v-2h">
+            <label for="checkbox-v-2h">Bancos</label>
+        </fieldset>
+
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#jardin" class="ui-btn ui-icon-star ui-btn-icon-left">Jardín</a></li>
+            <li><a href="#historial" class="ui-btn ui-icon-calendar ui-btn-icon-left">Historial</a></li>
+            <li><a href="#reparar" class="ui-btn ui-icon-info  ui-btn-icon-left">Reparar Mi Bici</a></li>
+            <li><a href="#configurar" class="ui-btn ui-icon-gear ui-btn-icon-left">Configuración</a></li>
+        </ul>
+	</div>
+    <!-- Final del panel -->
+
+  <!-- Inicio del header -->
+  <div data-role="header" data-position="fixed">
+  <a href="#mipanel" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext">Cancel</a>
+    <h1>Historial</h1>
+  <a href="#mapa" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-location ui-btn-icon-notext">Cancel</a>
+  </div>
+  <!-- Final del header -->
+
+  <!-- Inicio del contenido -->
+  <div role="main" class="ui-content">
+    <ul data-role="listview" data-inset="true">
+      <li><a href="#"> <img src="bike_icon_2.png">
+        <h2>FECHA</h2>
+        <p>KM - Duración</p>
+        </a> </li>
+      <li><a href="#"> <img src="bike_icon_2.png">
+        <h2>FECHA</h2>
+        <p>KM - Duración</p>
+        </a> </li>
+      <li><a href="#"> <img src="bike_icon_2.png">
+        <h2>FECHA</h2>
+        <p>KM - Duración</p>
+        </a> </li>
+    </ul>
+  </div>
+  <!-- Fin del contenido -->
+
+</div>
+<!-- Fin de la page Historial -->
+
+<!-- Inicio de la página3 -->
+<div data-role="page" id="reparar">
+
+   <!-- Inicio del panel -->
+	<div data-role="panel" data-display="overlay" id="mipanel">
+        <a href="#" data-rel="close" class="ui-btn ui-icon-delete ui-btn-icon-left">Menu</a>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+            <label for="checkbox-v-2a">Ciclorutas</label>
+            <input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+            <label for="checkbox-v-2b">CAI</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+            <label for="checkbox-v-2c">Ciclotalleres</label>
+            <input type="checkbox" name="checkbox-v-2d" id="checkbox-v-2d">
+            <label for="checkbox-v-2d">Accesorios</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2e" id="checkbox-v-2e">
+            <label for="checkbox-v-2e">Restaurantes y bares</label>
+            <input type="checkbox" name="checkbox-v-2f" id="checkbox-v-2f">
+            <label for="checkbox-v-2f">Cultura y Ocio</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2g" id="checkbox-v-2g">
+            <label for="checkbox-v-2g">Entidades</label>
+            <input type="checkbox" name="checkbox-v-2h" id="checkbox-v-2h">
+            <label for="checkbox-v-2h">Bancos</label>
+        </fieldset>
+
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#jardin" class="ui-btn ui-icon-star ui-btn-icon-left">Jardín</a></li>
+            <li><a href="#historial" class="ui-btn ui-icon-calendar ui-btn-icon-left">Historial</a></li>
+            <li><a href="#reparar" class="ui-btn ui-icon-info  ui-btn-icon-left">Reparar Mi Bici</a></li>
+            <li><a href="#configurar" class="ui-btn ui-icon-gear ui-btn-icon-left">Configuración</a></li>
+        </ul>
+	</div>
+    <!-- Final del panel -->
+
+  <!-- Inicio del header -->
+  <div data-role="header" data-position="fixed">
+  <a href="#mipanel" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext">Cancel</a>
+    <h1>Reparar Mi Bici</h1>
+  <a href="#mapa" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-location ui-btn-icon-notext">Cancel</a>
+  </div>
+  <!-- Final del header -->
+
+  <!-- Inicio del contenido -->
+  <div role="main" class="ui-content">
+    <ul data-role="listview" data-inset="true">
+      <li><a href="#"> <img src="bike_icon_2.png">
+        <h2>VIDEO 1</h2>
+        <p>¿Cómo arreglar la cadena?</p>
+        </a> </li>
+      <li><a href="#"> <img src="bike_icon_2.png">
+        <h2>VIDEO 2</h2>
+        <p>¿Cómo despinchar?</p>
+        </a> </li>
+      <li><a href="#"> <img src="bike_icon_2.png">
+        <h2>VIDEO 3</h2>
+        <p>¿Cómo ajustar los frenos?</p>
+        </a> </li>
+         <li><a href="#"> <img src="bike_icon_2.png">
+        <h2>VIDEO 4</h2>
+        <p>¿Cómo quitar la rueda trasera?</p>
+        </a> </li>
+    </ul>
+  </div>
+  <!-- Fin del contenido -->
+
+</div>
+<!-- Fin de la page Reparar -->
+
+  <!-- Inicio de la página 4 -->
+<div data-role="page" id="configurar">
+
+   <!-- Inicio del panel -->
+	<div data-role="panel" data-display="overlay" id="mipanel">
+        <a href="#" data-rel="close" class="ui-btn ui-icon-delete ui-btn-icon-left">Menu</a>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+            <label for="checkbox-v-2a">Ciclorutas</label>
+            <input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+            <label for="checkbox-v-2b">CAI</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+            <label for="checkbox-v-2c">Ciclotalleres</label>
+            <input type="checkbox" name="checkbox-v-2d" id="checkbox-v-2d">
+            <label for="checkbox-v-2d">Accesorios</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2e" id="checkbox-v-2e">
+            <label for="checkbox-v-2e">Restaurantes y bares</label>
+            <input type="checkbox" name="checkbox-v-2f" id="checkbox-v-2f">
+            <label for="checkbox-v-2f">Cultura y Ocio</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2g" id="checkbox-v-2g">
+            <label for="checkbox-v-2g">Entidades</label>
+            <input type="checkbox" name="checkbox-v-2h" id="checkbox-v-2h">
+            <label for="checkbox-v-2h">Bancos</label>
+        </fieldset>
+
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#jardin" class="ui-btn ui-icon-star ui-btn-icon-left">Jardín</a></li>
+            <li><a href="#historial" class="ui-btn ui-icon-calendar ui-btn-icon-left">Historial</a></li>
+            <li><a href="#reparar" class="ui-btn ui-icon-info  ui-btn-icon-left">Reparar Mi Bici</a></li>
+            <li><a href="#configurar" class="ui-btn ui-icon-gear ui-btn-icon-left">Configuración</a></li>
+        </ul>
+	</div>
+    <!-- Final del panel -->
+
+  <!-- Inicio del header -->
+  <div data-role="header" data-position="fixed">
+  <a href="#mipanel" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext">Cancel</a>
+    <h1>Configuración</h1>
+  <a href="#mapa" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-location ui-btn-icon-notext">Cancel</a>
+  </div>
+  <!-- Final del header -->
+
+    <!-- Inicio del contenido -->
+
+   <div role="main" class="ui-content">
+
+  <p align="center">Cerrar Sesión En:</p>
+
+  <div align="center">
+
+  <a href="#" class="ui-btn"><i class="fa fa-facebook-official"></i> Facebook</a>
+  <a href="#" class="ui-btn"><i class="fa fa-envelope"></i> Correo</a>
+
+   </div>
+
+   </div>
+
+  <!-- Fin del contenido -->
+
+</div>
+<!-- Fin de la page Reparar -->
+
+
+
+  <!-- Inicio de la página4 -->
+
+  <div data-role="page" id="jugar">
+
+  <!-- Inicio del header -->
+
+  <div data-role="header" data-position="fixed">
+  <a href="#mipanel" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext">Cancel</a>
+    <h1>Jardín</h1>
+
+  <a href="#mapa" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-location ui-btn-icon-notext">Cancel</a>
+  </div>
+
+  <!-- Final del header -->
+
+  <!-- Inicio del contenido -->
+  <div role="main" class="ui-content">
+
+  <p align="center"><strong>¿Cómo Jugar?</strong></p>
+
+  <p align="center">Tu planta crecerá a medida de que vayas iniciando nuevos recorridos, con cada recorrido finalizado tu planta recibirá un porcentaje en:</p>
+
+   <a href="#" class="ui-btn"><i class="fa fa-heart"></i> Salud</a>
+  <a href="#" class="ui-btn"><i class="fa fa-pagelines"></i> Medio Ambiente</a>
+  <a href="#" class="ui-btn"><i class="fa fa-clock-o"></i> Tiempo</a>
+
+   <br>
+      <br>
+
+  <a href="#jardin" class="ui-btn ui-btn-center ui-icon-delete ui-btn-icon-check">Aceptar</a>
+      </div>
+  <!-- Final del contenido -->
+
+  </div>
+<!-- Fin de la page Jugar -->
+
+
+<!-- Inicio de la página 5 -->
+<div data-role="page" id="posicion">
+
+   <!-- Inicio del panel -->
+	<div data-role="panel" data-display="overlay" id="mipanel">
+        <a href="#" data-rel="close" class="ui-btn ui-icon-delete ui-btn-icon-left">Menu</a>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+            <label for="checkbox-v-2a">Ciclorutas</label>
+            <input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+            <label for="checkbox-v-2b">CAI</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+            <label for="checkbox-v-2c">Ciclotalleres</label>
+            <input type="checkbox" name="checkbox-v-2d" id="checkbox-v-2d">
+            <label for="checkbox-v-2d">Accesorios</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2e" id="checkbox-v-2e">
+            <label for="checkbox-v-2e">Restaurantes y bares</label>
+            <input type="checkbox" name="checkbox-v-2f" id="checkbox-v-2f">
+            <label for="checkbox-v-2f">Cultura y Ocio</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2g" id="checkbox-v-2g">
+            <label for="checkbox-v-2g">Entidades</label>
+            <input type="checkbox" name="checkbox-v-2h" id="checkbox-v-2h">
+            <label for="checkbox-v-2h">Bancos</label>
+        </fieldset>
+
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#jardin" class="ui-btn ui-icon-star ui-btn-icon-left">Jardín</a></li>
+            <li><a href="#historial" class="ui-btn ui-icon-calendar ui-btn-icon-left">Historial</a></li>
+            <li><a href="#reparar" class="ui-btn ui-icon-info  ui-btn-icon-left">Reparar Mi Bici</a></li>
+            <li><a href="#configurar" class="ui-btn ui-icon-gear ui-btn-icon-left">Configuración</a></li>
+        </ul>
+	</div>
+    <!-- Final del panel -->
+
+  <!-- Inicio del header -->
+
+  <div data-role="header" data-position="fixed">
+  <a href="#mipanel" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext">Cancel</a>
+    <h1>Posiciones</h1>
+  <a href="#mapa" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-location ui-btn-icon-notext">Cancel</a>
+  </div>
+
+  <!-- Final del header -->
+
+  <!-- Inicio del contenido -->
+  <div role="main" class="ui-content">
+    <ul data-role="listview" data-inset="true">
+
+      <li><a href="#"> <img src="p2.gif">
+        <h2>#1 Pepita Perez</h2>
+        <p>4.210 Km Recorridos</p>
+        </a> </li>
+      <li><a href="#"> <img src="p1.jpg">
+        <h2>#2 Fulano Fula</h2>
+        <p>3.546 Km Recorridos</p>
+        </a> </li>
+      <li><a href="#"> <img src="p3.gif">
+        <h2>#3 Perenseja Perea</h2>
+        <p>2.874 Km Recorridos</p>
+        </a> </li>
+         <li><a href="#"> <img src="p4.jpg">
+        <h2>#4 Sutana Suta</h2>
+        <p>1.500 Km Recorridos</p>
+        </a> </li>
+    </ul>
+  </div>
+  <!-- Fin del contenido -->
+
+</div>
+<!-- Fin de la page Posiciones -->
+
+
+   <!-- Inicio de la página 6 -->
+<div data-role="page" id="forma">
+
+   <!-- Inicio del panel -->
+<div data-role="panel" data-display="overlay" id="mipanel">
+        <a href="#" data-rel="close" class="ui-btn ui-icon-delete ui-btn-icon-left">Menu</a>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+            <label for="checkbox-v-2a">Ciclorutas</label>
+            <input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+            <label for="checkbox-v-2b">CAI</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+            <label for="checkbox-v-2c">Ciclotalleres</label>
+            <input type="checkbox" name="checkbox-v-2d" id="checkbox-v-2d">
+            <label for="checkbox-v-2d">Accesorios</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2e" id="checkbox-v-2e">
+            <label for="checkbox-v-2e">Restaurantes y bares</label>
+            <input type="checkbox" name="checkbox-v-2f" id="checkbox-v-2f">
+            <label for="checkbox-v-2f">Cultura y Ocio</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2g" id="checkbox-v-2g">
+            <label for="checkbox-v-2g">Entidades</label>
+            <input type="checkbox" name="checkbox-v-2h" id="checkbox-v-2h">
+            <label for="checkbox-v-2h">Bancos</label>
+        </fieldset>
+
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#jardin" class="ui-btn ui-icon-star ui-btn-icon-left">Jardín</a></li>
+            <li><a href="#historial" class="ui-btn ui-icon-calendar ui-btn-icon-left">Historial</a></li>
+            <li><a href="#reparar" class="ui-btn ui-icon-info  ui-btn-icon-left">Reparar Mi Bici</a></li>
+            <li><a href="#configurar" class="ui-btn ui-icon-gear ui-btn-icon-left">Configuración</a></li>
+        </ul>
+	</div>
+    <!-- Final del panel -->
+
+<!-- Inicio del header -->
+  <div data-role="header" data-position="fixed">
+  <a href="#mipanel" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext">Cancel</a>
+    <h1>Forma</h1>
+  <a href="#mapa" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-location ui-btn-icon-notext">Cancel</a>
+  </div>
+  <!-- Final del header -->
+
+    <!-- Inicio del contenido -->
+
+   <div role="main" class="ui-content">
+
+  <p align="center"><strong>Elige la forma de tu Planta:</strong></p>
+   <br>
+
+  <div align="center">
+      <img src="cafe.png">
+      <a href="#jardin" class="ui-btn">CAFÉ <i class="fa fa-check-square"></i></a>
+
+        <br>
+
+       <img src="cerezo.png">
+      <a href="#jardin" class="ui-btn">CEREZO <i class="fa fa  fa-check-square"></i></a>
+
+       <br>
+
+       <img src="cana.png">
+           <a href="#jardin" class="ui-btn">CAÑA <i class="fa fa-check-square"></i></a>
+
+           </div>
+      </div>
+  <!-- Fin del contenido -->
+
+</div>
+<!-- Fin de la page Forma-->
+
+
+  <!-- Inicio de la página 7-->
+<div data-role="page" id="resultados">
+ <!-- Inicio del panel -->
+	<div data-role="panel" data-display="overlay" id="mipanel">
+        <a href="#" data-rel="close" class="ui-btn ui-icon-delete ui-btn-icon-left">Menu</a>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+            <label for="checkbox-v-2a">Ciclorutas</label>
+            <input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+            <label for="checkbox-v-2b">CAI</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+            <label for="checkbox-v-2c">Ciclotalleres</label>
+            <input type="checkbox" name="checkbox-v-2d" id="checkbox-v-2d">
+            <label for="checkbox-v-2d">Accesorios</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2e" id="checkbox-v-2e">
+            <label for="checkbox-v-2e">Restaurantes y bares</label>
+            <input type="checkbox" name="checkbox-v-2f" id="checkbox-v-2f">
+            <label for="checkbox-v-2f">Cultura y Ocio</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2g" id="checkbox-v-2g">
+            <label for="checkbox-v-2g">Entidades</label>
+            <input type="checkbox" name="checkbox-v-2h" id="checkbox-v-2h">
+            <label for="checkbox-v-2h">Bancos</label>
+        </fieldset>
+
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#jardin" class="ui-btn ui-icon-star ui-btn-icon-left">Jardín</a></li>
+            <li><a href="#historial" class="ui-btn ui-icon-calendar ui-btn-icon-left">Historial</a></li>
+            <li><a href="#reparar" class="ui-btn ui-icon-info  ui-btn-icon-left">Reparar Mi Bici</a></li>
+            <li><a href="#configurar" class="ui-btn ui-icon-gear ui-btn-icon-left">Configuración</a></li>
+        </ul>
+	</div>
+    <!-- Final del panel -->
+
+
+  <!-- Inicio del header -->
+  <div data-role="header" data-position="fixed">
+  <a href="#mipanel" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext">Cancel</a>
+    <h1>Resultados</h1>
+
+  <a href="#mapa" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-location ui-btn-icon-notext">Cancel</a>
+  </div>
+  <!-- Final del header -->
+
+    <!-- Inicio del contenido -->
+
+   <div role="main" class="ui-content">
+    <div align="center">
+  <br>
+<br>
+ 	<a href="#" class="ui-btn ui-btn-center"><i class="fa fa-heart"></i>
+      Has fortalecido tu
+      <br> sistema inmunológico</a>
+
+    <a href="#" class="ui-btn ui-btn-center"><i class="fa fa-pagelines"></i>
+Has dejado de producir
+<br> 2 kilos de CO2</a>
+
+   <a href="#" class="ui-btn ui-btn-center"><i class="fa fa-clock-o"></i>
+Has ahorrado
+<br>15 minutos de viaje</a>
+
+   </div>
+
+<br>
+<br>
+	<a href="#compartir" class="ui-btn ui-btn-center ui-icon-delete ui-btn-icon-check">Aceptar</a>
+
+           </div>
+
+
+  <!-- Fin del contenido -->
+
+</div>
+<!-- Fin de la page Resultados-->
+
+
+  <!-- Inicio de la página 7-->
+
+<div data-role="page" id="compartir">
+ <!-- Inicio del panel -->
+	<div data-role="panel" data-display="overlay" id="mipanel">
+        <a href="#" data-rel="close" class="ui-btn ui-icon-delete ui-btn-icon-left">Menu</a>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+            <label for="checkbox-v-2a">Ciclorutas</label>
+            <input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+            <label for="checkbox-v-2b">CAI</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+            <label for="checkbox-v-2c">Ciclotalleres</label>
+            <input type="checkbox" name="checkbox-v-2d" id="checkbox-v-2d">
+            <label for="checkbox-v-2d">Accesorios</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2e" id="checkbox-v-2e">
+            <label for="checkbox-v-2e">Restaurantes y bares</label>
+            <input type="checkbox" name="checkbox-v-2f" id="checkbox-v-2f">
+            <label for="checkbox-v-2f">Cultura y Ocio</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2g" id="checkbox-v-2g">
+            <label for="checkbox-v-2g">Entidades</label>
+            <input type="checkbox" name="checkbox-v-2h" id="checkbox-v-2h">
+            <label for="checkbox-v-2h">Bancos</label>
+        </fieldset>
+
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#jardin" class="ui-btn ui-icon-star ui-btn-icon-left">Jardín</a></li>
+            <li><a href="#historial" class="ui-btn ui-icon-calendar ui-btn-icon-left">Historial</a></li>
+            <li><a href="#reparar" class="ui-btn ui-icon-info  ui-btn-icon-left">Reparar Mi Bici</a></li>
+            <li><a href="#configurar" class="ui-btn ui-icon-gear ui-btn-icon-left">Configuración</a></li>
+        </ul>
+	</div>
+    <!-- Final del panel -->
+
+
+ <!-- Inicio del header -->
+  <div data-role="header" data-position="fixed">
+  <a href="#mipanel" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext">Cancel</a>
+    <h1>Resultados</h1>
+  <a href="#mapa" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-location ui-btn-icon-notext">Cancel</a>
+  </div>
+  <!-- Final del header -->
+
+ <!-- Inicio del contenido -->
+
+   <div role="main" class="ui-content">
+
+     <p align="center"><strong>Compartir en:</strong></p>
+
+
+       <a href="#" class="ui-btn"><i class="fa fa-facebook-official"></i> Facebook</a>
+  <a href="#" class="ui-btn"><i class="fa fa-twitter"></i> Twitter</a>
+
+  </div>
+  <!-- Final del contenido -->
+
+</div>
+<!-- Final de la página Compartir-->
+
+
+
+ <!-- Inicio de la página 8 -->
+<div data-role="page" id="plantadebil">
+
+  <!-- Inicio del header -->
+  <div data-role="header" data-position="fixed">
+  <a href="#mipanel" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext">Cancel</a>
+    <h1>Jardín</h1>
+  <a href="#mapa" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-location ui-btn-icon-notext">Cancel</a>
+  </div>
+  <!-- Final del header -->
+
+  <!-- Inicio del contenido -->
+  <div role="main" class="ui-content">
+   <!-- Inicio del contenido -->
+
+  <p align="center"><strong>¡TÚ PLANTA ESTÁ MURIENDO!</strong></p>
+
+<div align="center">
+  	<img src="plantadebil.png" width="80" height="80">
+  </div>
+
+  <p align="center">A tú planta se le han caído algunas hojas, se está secando y los gusanos se han alimentado con ella. Inicia nuevos recorridos para salvarla.</p>
+  <a href="#jardin" class="ui-btn ui-btn-center ui-icon-delete ui-btn-icon-check">Aceptar</a>
+
+     </div>
+  <!-- Final del contenido -->
+
+  </div>
+<!-- Fin de la page Planta Debil-->
+
+  <!-- Inicio de la página 9 -->
+<div data-role="page" id="plantamuere">
+
+ <!-- Inicio del header -->
+  <div data-role="header" data-position="fixed">
+  <a href="#mipanel" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext">Cancel</a>
+    <h1>Jardín</h1>
+  <a href="#mapa" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-location ui-btn-icon-notext">Cancel</a>
+  </div>
+  <!-- Final del header -->
+
+  <!-- Inicio del contenido -->
+  <div role="main" class="ui-content">
+
+  <p align="center"><strong>¡Llevas 45 días sin nuevos recorridos!</strong></p>
+
+    <div align="center">
+  	<img src="plantaseca.png" width="80" height="80">
+  </div>
+    <a href="#" class="ui-btn ui-btn-center"><i class="fa fa-heart"></i> <strong>0%</strong></a>
+    <a href="#" class="ui-btn ui-btn-center"><i class="fa fa-pagelines"></i> <strong>0%</strong></a>
+    <a href="#" class="ui-btn ui-btn-center"><i class="fa fa-clock-o"></i> <strong>0%</strong></a>
+
+  <p align="center">Lo sentimos, tú planta ha muerto y perdiste todos los Km acumulados. No te preocupes, puedes empezar de nuevo adquiriendo una nueva semilla para cuidar.</p>
+  <a href="#jardin" class="ui-btn ui-btn-center ui-icon-delete ui-btn-icon-check">Quiero Una Nueva Semilla</a>
+
+  </div>
+  <!-- Final del contenido -->
+
+  </div>
+<!-- Fin de la page Planta Muere -->
+
+
+   <!-- Inicio de la página 10 -->
+<div data-role="page" id="plantaadulta">
+
+  <!-- Inicio del header -->
+  <div data-role="header" data-position="fixed">
+  <a href="#mipanel" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext">Cancel</a>
+    <h1>Jardín</h1>
+  <a href="#mapa" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-location ui-btn-icon-notext">Cancel</a>
+  </div>
+  <!-- Final del header -->
+
+  <!-- Inicio del contenido -->
+  <div role="main" class="ui-content">
+
+  <p align="center"><strong>¡FELICIDADES!</strong></p>
+  <p align="center"><strong>TU PLANTA SE HA CONVERTIDO EN UN HERMOSO ÁRBOL CEREZO Y HA DADO FRUTOS</strong></p>
+
+    <div align="center">
+
+    <div align="center">
+  	<img src="arbolcerezofruto.png" width="80" height="80">
+  </div>
+
+<a href="#" class="ui-btn ui-btn-center"><i class="fa fa-heart"></i> <strong>100%</strong></a>
+    <a href="#" class="ui-btn ui-btn-center"><i class="fa fa-pagelines"></i> <strong>100%</strong></a>
+    <a href="#" class="ui-btn ui-btn-center"><i class="fa fa-clock-o"></i> <strong>100%</strong></a>
+   </div>
+
+
+  <p align="center">Ahora debes sembrar tú árbol y se te hará entrega de un bono redimible en: </p>
+  <p align="center"><strong>BIKE HOUSE</strong></p>
+  <a href="#nuevasemilla" class="ui-btn ui-btn-center ui-icon-delete ui-btn-icon-check">Aceptar</a>
+
+     </div>
+  <!-- Final del contenido -->
+
+  </div>
+<!-- Fin de la page Planta Muere -->
+
+    <!-- Inicio de la página 11 -->
+<div data-role="page" id="nuevasemilla">
+
+ <!-- Inicio del contenido -->
+  <div role="main" class="ui-content">
+
+  <p align="center"><strong>¡Haz ganado una nueva semilla!</strong></p>
+
+  <div align="center">
+  	<img src="semillaganador.png" width="80" height="80">
+  </div>
+
+  <p align="center"><strong>¡Cuídala!</strong></p>
+
+	<a href="#jardin" class="ui-btn">Ir al Jardín</a>
+	<a href="#mapa" class="ui-btn">Ir al Mapa</a>
+
+
+  </div>
+  <!-- Final del contenido -->
+
+</div>
+<!-- Final de la página -->
+
+
+ <!-- Inicio de la página 12 -->
+<div data-role="page" id="jardin">
+
+ <!-- Inicio del panel -->
+	<div data-role="panel" data-display="overlay" id="mipanel">
+        <a href="#" data-rel="close" class="ui-btn ui-icon-delete ui-btn-icon-left">Menu</a>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+            <label for="checkbox-v-2a">Ciclorutas</label>
+            <input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+            <label for="checkbox-v-2b">CAI</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+            <label for="checkbox-v-2c">Ciclotalleres</label>
+            <input type="checkbox" name="checkbox-v-2d" id="checkbox-v-2d">
+            <label for="checkbox-v-2d">Accesorios</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2e" id="checkbox-v-2e">
+            <label for="checkbox-v-2e">Restaurantes y bares</label>
+            <input type="checkbox" name="checkbox-v-2f" id="checkbox-v-2f">
+            <label for="checkbox-v-2f">Cultura y Ocio</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2g" id="checkbox-v-2g">
+            <label for="checkbox-v-2g">Entidades</label>
+            <input type="checkbox" name="checkbox-v-2h" id="checkbox-v-2h">
+            <label for="checkbox-v-2h">Bancos</label>
+        </fieldset>
+
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#jardin" class="ui-btn ui-icon-star ui-btn-icon-left">Jardín</a></li>
+            <li><a href="#historial" class="ui-btn ui-icon-calendar ui-btn-icon-left">Historial</a></li>
+            <li><a href="#reparar" class="ui-btn ui-icon-info  ui-btn-icon-left">Reparar Mi Bici</a></li>
+            <li><a href="#configurar" class="ui-btn ui-icon-gear ui-btn-icon-left">Configuración</a></li>
+        </ul>
+	</div>
+    <!-- Final del panel -->
+
+
+  <!-- Inicio del header -->
+<div data-role="header" data-position="fixed">
+  <a href="#mipanel" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext">Cancel</a>
+    <h1>Jardín</h1>
+  <a href="#mapa" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-location ui-btn-icon-notext">Cancel</a>
+  </div>
+  <!-- Final del header -->
+
+
+   <!-- Inicio del contenido -->
+    <br>
+
+
+   <div role="main" class="ui-content">
+       <div class="ui-grid-d">
+           <div class="ui-block-a">
+            <a href="#posicion" class="ui-btn ui-icon-grid ui-btn-icon-notext ui-corner-all"></a>
+               </div>
+           <div class="ui-block-b"></div>
+           <div class="ui-block-c"></div>
+           <div class="ui-block-d"></div>
+           <div class="ui-block-e">
+               <br>
+               <br>
+            <a href="#" class="ui-btn ui-icon-heart ui-btn-icon-notext ui-corner-all"></a>
+           </div>
+
+           <div class="ui-block-a"><a href="#forma" class="ui-btn ui-icon-eye ui-btn-icon-notext ui-corner-all"></a></div>
+           <div class="ui-block-b"></div>
+           <div class="ui-block-c"></div>
+           <div class="ui-block-d"></div>
+           <div class="ui-block-e"><a href="#" class="ui-btn ui-icon-cloud	 ui-btn-icon-notext ui-corner-all"></a></div>
+
+           <div class="ui-block-a"></div>
+           <div class="ui-block-b"></div>
+           <div class="ui-block-c"></div>
+           <div class="ui-block-d"></div>
+           <div class="ui-block-e"><a href="#" class="ui-btn ui-icon-clock ui-btn-icon-notext ui-corner-all"></a></div>
+       </div>
+
+        <br>
+        <br>
+       <br>
+        <br>
+       <br>
+        <br>
+
+<div align="center">
+<img src="semillatierra2.png" width="350" height="80">
+       </div>
+
+ </div>
+  <!-- Final del contenido -->
+
+</div>
+<!-- Final de la página -->
+
+
+<i class="fa fa-heart"></i>
+
+
+
+
+<!-- Inicio de la página 14 -->
+<div data-role="page" id="recorrido">
+
+   <!-- Inicio del panel -->
+	<div data-role="panel" data-display="overlay" id="mipanel">
+        <a href="#" data-rel="close" class="ui-btn ui-icon-delete ui-btn-icon-left">Menu</a>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+            <label for="checkbox-v-2a">Ciclorutas</label>
+            <input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+            <label for="checkbox-v-2b">CAI</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+            <label for="checkbox-v-2c">Ciclotalleres</label>
+            <input type="checkbox" name="checkbox-v-2d" id="checkbox-v-2d">
+            <label for="checkbox-v-2d">Accesorios</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2e" id="checkbox-v-2e">
+            <label for="checkbox-v-2e">Restaurantes y bares</label>
+            <input type="checkbox" name="checkbox-v-2f" id="checkbox-v-2f">
+            <label for="checkbox-v-2f">Cultura y Ocio</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2g" id="checkbox-v-2g">
+            <label for="checkbox-v-2g">Entidades</label>
+            <input type="checkbox" name="checkbox-v-2h" id="checkbox-v-2h">
+            <label for="checkbox-v-2h">Bancos</label>
+        </fieldset>
+
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#jardin" class="ui-btn ui-icon-star ui-btn-icon-left">Jardín</a></li>
+            <li><a href="#historial" class="ui-btn ui-icon-calendar ui-btn-icon-left">Historial</a></li>
+            <li><a href="#reparar" class="ui-btn ui-icon-info  ui-btn-icon-left">Reparar Mi Bici</a></li>
+            <li><a href="#configurar" class="ui-btn ui-icon-gear ui-btn-icon-left">Configuración</a></li>
+        </ul>
+	</div>
+    <!-- Final del panel -->
+
+  <!-- Inicio del header -->
+  <div data-role="header" data-position="fixed">
+  <a href="#mipanel" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext">Cancel</a>
+    <h1>Iniciar Recorrido</h1>
+  <a href="#mapa" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-location ui-btn-icon-notext">Cancel</a>
+  </div>
+  <!-- Final del header -->
+
+  <!-- Inicio del contenido -->
+    <div role="main" class="ui-content">
+
+    <div align="center"><img src="cicla.png">
+    	</div>
+<br>
+    <div class="ui-grid-b">
+    <div class="ui-block-a"><input type="DURACIÓN" data-role="none" value="DURACIÓN"></div>
+    <div class="ui-block-b"><input type="DISTANCIA" data-role="none" value="DISTANCIA"></div>
+    <div class="ui-block-c"><input type="VELOCIDAD" data-role="none" value="VELOCIDAD"></div>
+    </div><!-- /grid-b -->
+
+
+    <div align="center">
+<button class="ui-btn ui-btn-inline">Empezar</button>
+<button class="ui-btn ui-btn-inline">Terminar</button>
+</div>
+    <div align="center">
+    <a href="#" class="ui-btn ui-btn-inline ui-icon-recycle ui-btn-icon-top">Pausar</a>
+    </div>
+
+   </div>
+
+
+   <!-- Final del contenido -->
+
+
+</div>
+<!-- Final de la página Recorrido -->
+
+
+
+<!-- Inicio de la página 15 -->
+<div data-role="page" id="rutas">
+   <!-- Inicio del panel -->
+	<div data-role="panel" data-display="overlay" id="mipanel">
+        <a href="#" data-rel="close" class="ui-btn ui-icon-delete ui-btn-icon-left">Menu</a>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+            <label for="checkbox-v-2a">Ciclorutas</label>
+            <input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+            <label for="checkbox-v-2b">CAI</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+            <label for="checkbox-v-2c">Ciclotalleres</label>
+            <input type="checkbox" name="checkbox-v-2d" id="checkbox-v-2d">
+            <label for="checkbox-v-2d">Accesorios</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2e" id="checkbox-v-2e">
+            <label for="checkbox-v-2e">Restaurantes y bares</label>
+            <input type="checkbox" name="checkbox-v-2f" id="checkbox-v-2f">
+            <label for="checkbox-v-2f">Cultura y Ocio</label>
+        </fieldset>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="checkbox-v-2g" id="checkbox-v-2g">
+            <label for="checkbox-v-2g">Entidades</label>
+            <input type="checkbox" name="checkbox-v-2h" id="checkbox-v-2h">
+            <label for="checkbox-v-2h">Bancos</label>
+        </fieldset>
+
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#jardin" class="ui-btn ui-icon-star ui-btn-icon-left">Jardín</a></li>
+            <li><a href="#historial" class="ui-btn ui-icon-calendar ui-btn-icon-left">Historial</a></li>
+            <li><a href="#reparar" class="ui-btn ui-icon-info  ui-btn-icon-left">Reparar Mi Bici</a></li>
+            <li><a href="#configurar" class="ui-btn ui-icon-gear ui-btn-icon-left">Configuración</a></li>
+        </ul>
+	</div>
+    <!-- Final del panel -->
+
+
+  <!-- Inicio del header -->
+  <div data-role="header" data-position="fixed">
+  <a href="#mipanel" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-bars ui-btn-icon-notext">Cancel</a>
+    <h1>Fecha</h1>
+  <a href="#mapa" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-location ui-btn-icon-notext">Cancel</a>
+  </div>
+  <!-- Final del header -->
+
+  <!-- Inicio del contenido -->
+    <div role="main" class="ui-content">
+
+    <div align="center">
+  <div align="center"><img src="cicla.png">
+    	</div>
+         <br>
+        <div class="ui-grid-b">
+        <div class="ui-block-a"><input type="DURACIÓN" data-role="none" value="DURACIÓN"></div>
+    <div class="ui-block-b"><input type="DISTANCIA" data-role="none" value="DISTANCIA"></div>
+    <div class="ui-block-c"><input type="VELOCIDAD" data-role="none" value="VELOCIDAD"></div>
+    </div><!-- /grid-b -->
+
+	</div>
+
+    <div align="center">
+
+<button class="ui-btn ui-btn-inline ui-icon-delete">Eliminar</button>
+
+
+    </div>
+    </div>
+
+
+   <!-- Final del contenido -->
+
+
+</div>
+<!-- Final de la página Rutas -->
+
+
+
+
+
+
+
+
+
+<!-- Final del panel -->
+
+
+<!-- Inicio de la página -->
+<div data-role="page" id="pagina">
+  <!-- Inicio del panel -->
+  <div data-role="panel" id="mipanel"> Contenido del panel </div>
+  <!-- Final del panel -->
+
+  <!-- Inicio del header -->
+  <div data-role="header"> </div>
+  <!-- Final del header -->
+
+  <!-- Inicio del contenido -->
+  <div role="main" class="ui-content"> </div>
+  <!-- Final del contenido -->
+
+  <!-- Inicio del footer -->
+  <div data-role="footer"> </div>
+  <!-- Final del footer -->
+</div>
+<!-- Final de la página -->
+
+</body>
+</html>
